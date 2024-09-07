@@ -7,7 +7,7 @@
 Este projeto é um sistema bancário simples desenvolvido em Java, como parte da disciplina de **Programação Orientada a Objetos (POO)**. O objetivo é permitir que o usuário possa:
 - Cadastrar-se no sistema bancário;
 - Realizar operações básicas como verificar saldo, sacar e depositar dinheiro;
-- Editar os dados do usuário.
+- Editar os dados do usuário:
 
 O sistema foi construído com princípios de POO, utilizando classes e métodos para organizar a lógica, encapsulando dados e responsabilidades.
 
