@@ -1,5 +1,3 @@
----
-
 # Sistema Bancário Simples
 
 ## Sobre o projeto
@@ -56,5 +54,3 @@ java Main
 
 - Adicionar uma forma de salvar os dados para não perder as contas quando o programa fecha.
 - Colocar mais funções, como transferências entre contas.
-
----
