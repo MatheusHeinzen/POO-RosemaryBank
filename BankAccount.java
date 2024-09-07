@@ -1,8 +1,13 @@
 public class BankAccount {
-    private double saldo = 0;
-    private double credito = 5000; // Valor inicial de crédito
-    private double fluxo = 0;
-    private double divida = 0;
+    private double saldo;
+    private double credito;
+    private double divida;
+
+    public BankAccount() {
+        this.saldo = 0.0;
+        this.credito = 5000.0;
+        this.divida = 0.0;
+    }
 
     public double getSaldo() {
         return saldo;
@@ -17,42 +22,38 @@ public class BankAccount {
     }
 
     public double sacar(double valor) {
-        if (saldo < valor) {
-            return -1; // Indica saldo insuficiente
-        } else {
+        if (saldo >= valor) {
             saldo -= valor;
-            fluxo -= valor;
             return saldo;
+        } else {
+            return -1;
         }
     }
 
     public double depositar(double valor) {
-        if (valor > 0) {
-            saldo += valor;
-            fluxo += valor;
-        }
+        saldo += valor;
         return saldo;
     }
 
     public double fazerEmprestimo(double valor) {
         if (valor <= credito) {
-            credito -= valor;
             saldo += valor;
             divida += valor;
+            credito -= valor;
+            return saldo;
         } else {
             return -1;
         }
-        return saldo;
     }
+
     public double pagarDivida(double valor) {
-        if (valor <= divida && valor <= saldo) {
-            credito += valor;
-            saldo -= valor;
+        if (divida > 0 && valor <= divida && saldo >= valor) {
             divida -= valor;
-        } else{
+            saldo -= valor;
+            credito += valor;
+            return divida;
+        } else {
             return -1;
         }
-        return divida;
     }
 }
-

@@ -25,6 +25,26 @@ public class User {
         return senha;
     }
 
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public double getRenda() {
+        return renda;
+    }
+
+    public void setRenda(double renda) {
+        this.renda = renda;
+    }
+
     public BankAccount getBankAccount() {
         return bankAccount;
     }
